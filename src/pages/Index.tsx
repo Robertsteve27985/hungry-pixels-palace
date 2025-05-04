@@ -8,6 +8,9 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import SpecialOffer from "@/components/SpecialOffer";
+import RestaurantInfo from "@/components/RestaurantInfo";
+import Newsletter from "@/components/Newsletter";
 
 const Index = () => {
   // Reveal animation on scroll
@@ -38,11 +41,13 @@ const Index = () => {
     <div className="min-h-screen bg-food-light">
       <Navbar />
       <HeroSection />
-      <CategorySection />
-      <PopularDishes />
       <HowItWorks />
+      <PopularDishes />
+      <SpecialOffer />
+      <RestaurantInfo />
       <Testimonials />
       <CallToAction />
+      <Newsletter />
       <Footer />
     </div>
   );

@@ -8,6 +8,7 @@ interface ParallaxSectionProps {
   bgImage?: string;
   speed?: number;
   overlay?: boolean;
+  id?: string; // Added id property
 }
 
 export const ParallaxSection = ({
@@ -16,6 +17,7 @@ export const ParallaxSection = ({
   bgImage,
   speed = 0.5,
   overlay = false,
+  id, // Added id to props destructuring
 }: ParallaxSectionProps) => {
   const [offsetY, setOffsetY] = useState(0);
 
@@ -30,6 +32,7 @@ export const ParallaxSection = ({
 
   return (
     <section
+      id={id} // Added id to the section element
       className={cn(
         "relative w-full overflow-hidden",
         className

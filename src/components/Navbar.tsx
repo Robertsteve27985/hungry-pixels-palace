@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center">
           <span className="text-2xl font-bold text-food-orange">
-            TastyBites
+            AsianFood
           </span>
         </a>
 
@@ -52,23 +52,31 @@ const Navbar = () => {
             href="#how-it-works"
             className="text-food-dark font-medium hover:text-food-orange transition-colors"
           >
-            How It Works
+            How To Order
           </a>
           <a
             href="#testimonials"
             className="text-food-dark font-medium hover:text-food-orange transition-colors"
           >
-            Testimonials
+            Reviews
           </a>
         </nav>
 
         {/* CTA Button */}
-        <Button
-          variant="default"
-          className="hidden md:inline-flex bg-food-orange hover:bg-food-red transition-colors"
-        >
-          Order Now
-        </Button>
+        <div className="hidden md:flex items-center gap-4">
+          <Button
+            variant="outline"
+            className="border-food-orange text-food-orange hover:bg-food-orange/10"
+          >
+            Log In
+          </Button>
+          <Button
+            variant="default"
+            className="bg-food-orange hover:bg-food-red transition-colors"
+          >
+            Order Now
+          </Button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -124,22 +132,30 @@ const Navbar = () => {
               className="text-food-dark font-medium hover:text-food-orange transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              How It Works
+              How To Order
             </a>
             <a
               href="#testimonials"
               className="text-food-dark font-medium hover:text-food-orange transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Testimonials
+              Reviews
             </a>
-            <Button
-              variant="default"
-              className="bg-food-orange hover:bg-food-red transition-colors w-full"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Order Now
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                className="border-food-orange text-food-orange hover:bg-food-orange/10 w-1/2"
+              >
+                Log In
+              </Button>
+              <Button
+                variant="default"
+                className="bg-food-orange hover:bg-food-red transition-colors w-1/2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Order Now
+              </Button>
+            </div>
           </div>
         </div>
       )}

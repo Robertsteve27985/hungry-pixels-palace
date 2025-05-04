@@ -66,9 +66,11 @@ export default {
 				food: {
 					'orange': '#FF6B35',
 					'red': '#C0392B',
-					'light': '#FFF5F0',
+					'light': '#FFF8F0',
 					'dark': '#2D3748',
-					'accent': '#FDBA74'
+					'accent': '#FFCB77',
+					'yellow': '#FFD700',
+					'green': '#4CAF50'
 				}
 			},
 			borderRadius: {
@@ -118,6 +120,14 @@ export default {
 					'100%': {
 						transform: 'scale(1.05)'
 					}
+				},
+				'spin-slow': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
 				}
 			},
 			animation: {
@@ -125,7 +135,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
 				'float': 'float 4s ease-in-out infinite',
-				'scale': 'scale 0.3s ease-in-out forwards'
+				'scale': 'scale 0.3s ease-in-out forwards',
+				'spin-slow': 'spin-slow 10s linear infinite'
 			}
 		}
 	},
